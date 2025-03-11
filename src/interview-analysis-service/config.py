@@ -28,6 +28,12 @@ class Config:
     # AssemblyAI API key (should be set as environment variable in production)
     ASSEMBLYAI_API_KEY = os.environ.get("ASSEMBLYAI_API_KEY", "")
 
+    # Task queue configuration
+    TASK_QUEUE_WORKERS = int(os.getenv("TASK_QUEUE_WORKERS", "4"))
+    TASK_QUEUE_RESULTS_TTL = int(
+        os.getenv("TASK_QUEUE_RESULTS_TTL", "86400")
+    )  # 24 hours in seconds
+
 
 class DevelopmentConfig(Config):
     """Development configuration."""

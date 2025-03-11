@@ -4,6 +4,7 @@ import os
 from api.routes import interview_api
 from config import Config
 from flask import Flask
+from utils.nltk_setup import ensure_nltk_resources
 
 
 def create_app(config_class=Config):
@@ -64,6 +65,9 @@ def setup_logging(app):
     app.logger.info("Interview Analysis Service started")
 
 
+# Ensure NLTK resources are available
+ensure_nltk_resources()
+
 if __name__ == "__main__":
     app = create_app()
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 4000)))

@@ -1,16 +1,9 @@
 import logging
 
-import nltk
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 
 logger = logging.getLogger(__name__)
-
-# Download required NLTK data on module import
-try:
-    nltk.download("punkt", quiet=True)
-except Exception as e:
-    logger.warning(f"Failed to download NLTK data: {str(e)}")
 
 
 class LexicalFeatureExtractor:
