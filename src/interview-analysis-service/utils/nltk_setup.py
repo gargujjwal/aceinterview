@@ -23,7 +23,7 @@ def ensure_nltk_resources():
             nltk.download("punkt", download_dir=nltk_data_path)
 
         # Add other NLTK resources that might be needed
-        required_resources = ["punkt", "punkt_tab"]
+        required_resources = ["punkt", "punkt_tab", "stopwords", "wordnet"]
 
         for resource in required_resources:
             try:
