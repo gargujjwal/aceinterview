@@ -1,6 +1,5 @@
 # Custom
 tmp/
-models/
 
 .DS_Store
 /node_modules/
