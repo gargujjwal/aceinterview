@@ -1,4 +1,4 @@
-name: posture-analysis-env_
+name: posture-analysis-env
 channels:
   - conda-forge
   - defaults
