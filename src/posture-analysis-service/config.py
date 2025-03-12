@@ -9,9 +9,23 @@ class Config:
     DEBUG = False
     TESTING = False
 
+    # Paths
+    BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+    TEMPORARY_ARTIFACTS_PATH = os.environ.get(
+        "TEMPORARY_ARTIFACTS_PATH", os.path.join(BASE_DIR, "tmp")
+    )
+
     # Service settings
-    UPLOAD_FOLDER = os.environ.get("UPLOAD_FOLDER", "/tmp/posture-analysis")
+    UPLOAD_FOLDER = os.environ.get(
+        "UPLOAD_FOLDER", os.path.join(TEMPORARY_ARTIFACTS_PATH, "uploads")
+    )
     MAX_CONTENT_LENGTH = 200 * 1024 * 1024  # 16 MB maximum file size
+
+    # Task queue configuration
+    TASK_QUEUE_WORKERS = int(os.getenv("TASK_QUEUE_WORKERS", "2"))
+    TASK_QUEUE_RESULTS_TTL = int(
+        os.getenv("TASK_QUEUE_RESULTS_TTL", "86400")
+    )  # 24 hours in seconds
 
 
 class DevelopmentConfig(Config):
