@@ -37,6 +37,16 @@
 
 AceInterview is an AI-driven platform that provides comprehensive interview preparation through advanced analysis of verbal and non-verbal communication. Leveraging machine learning, computer vision, and NLP techniques, the system evaluates candidates' performance across multiple dimensions to deliver personalized feedback and actionable insights.
 
+### Screenshots
+
+![Homepage](./readme-assets/frontend/homepage.png)
+![About Us Page](./readme-assets/frontend/about-us-page.png)
+![Contact Page](./readme-assets/frontend/contact-page.png)
+![Architecture Page](./readme-assets/frontend/arch-page.png)
+![System Health Check Page](./readme-assets/frontend/health-check-page.png)
+![Interview Analysis Result Page](./readme-assets/frontend/interview-analysis.png)
+![Posture Analysis Result Page](./readme-assets/frontend/posture-analysis.png)
+
 ## Key Features
 
 - **Multimodal Behavioral Analysis**
