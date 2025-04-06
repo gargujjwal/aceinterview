@@ -34,6 +34,7 @@ export type InterviewAnalysisResult = {
   };
   good_performance: string[];
   improvement_opportunity: string[];
+  inferences: [];
 };
 export type TaskStatusResponse =
   | {

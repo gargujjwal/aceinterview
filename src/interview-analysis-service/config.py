@@ -13,7 +13,7 @@ class Config:
     LOG_LEVEL = os.environ.get("LOG_LEVEL", "INFO")
 
     # API settings
-    MAX_CONTENT_LENGTH = 50 * 1024 * 1024  # 50MB max upload size
+    MAX_CONTENT_LENGTH = 500 * 1024 * 1024  # 500MB max upload size
 
     # Paths
     BASE_DIR = os.path.abspath(os.path.dirname(__file__))

@@ -1,4 +1,5 @@
 from core.video_processor import VideoProcessor
+from services.result_interpreter import ResultInterpreter
 from utils.angle_utils import calculate_average_angles, generate_posture_feedback
 
 
@@ -12,6 +13,7 @@ class PostureAnalysisService:
         Initialize the posture analysis service.
         """
         self.video_processor = VideoProcessor()
+        self.result_interpreter = ResultInterpreter()
 
     def analyze_posture(self, video_data):
         """
@@ -21,7 +23,7 @@ class PostureAnalysisService:
             video_data (bytes): Video file data in bytes
 
         Returns:
-            dict: Analysis results including average angles and feedback
+            dict: Analysis results including average angles, feedback, inferences and tips
         """
         # Process the video to extract angles
         processing_result = self.video_processor.process_video(video_data)
@@ -52,4 +54,7 @@ class PostureAnalysisService:
             "feedback": feedback,
         }
 
-        return response
+        # Enhance the response with inferences and tips
+        enhanced_response = self.result_interpreter.interpret_results(response)
+
+        return enhanced_response

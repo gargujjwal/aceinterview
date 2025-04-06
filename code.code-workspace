@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "src/interview-analysis-service"
+    },
+    {
+      "path": "src/posture-analysis-service"
+    },
+    {
+      "path": "src/client"
+    }
+  ],
+  "settings": {
+    "cSpell.words": ["ASSEMBLYAI", "Praat"]
+  }
+}

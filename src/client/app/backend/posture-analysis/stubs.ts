@@ -46,6 +46,8 @@ export type PostureAnalysisResult =
         "Right Shoulder-Elbow": string;
         [key: string]: string; // For any additional feedback that might be added
       };
+      inferences: string[];
+      tips: string[];
     }
   | { message: string; status: "error" };
 

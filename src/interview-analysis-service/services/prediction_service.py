@@ -3,7 +3,9 @@ import os
 import pickle
 
 import pandas as pd
+
 from config import MEDIANS_PATH, MODEL_PATH, Config
+from services.result_interpreter import ResultInterpreter
 from utils.emotion import EmotionDetector
 from utils.lexical_extraction import LexicalFeatureExtractor
 from utils.praat_extraction import PraatFeatureExtractor
@@ -120,25 +122,8 @@ class PredictionService:
             ]
             prediction_dict = dict(zip(prediction_labels, prediction[0]))
 
-            # Classify based on medians
-            classify = {}
-            for label, value in prediction_dict.items():
-                if value >= self.medians[label].values[0]:
-                    classify[label] = 1
-                else:
-                    classify[label] = 0
-
-            # Add additional classifications for display
-            # These were implicitly added in the original code's display_results function
-            result = {
-                "classifications": classify,
-                "good_performance": [
-                    label for label, score in classify.items() if score == 1
-                ],
-                "improvement_opportunity": [
-                    label for label, score in classify.items() if score == 0
-                ],
-            }
+            result_interpreter = ResultInterpreter()
+            result = result_interpreter.interpret(prediction_dict)
 
             logger.info("Prediction completed successfully")
             return result
