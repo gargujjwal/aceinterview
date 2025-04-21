@@ -23,15 +23,25 @@
 
 ## Table of Contents
 
-- [About the Project](#about-the-project)
-- [Key Features](#key-features)
-- [Methodology](#methodology)
-- [System Architecture](#system-architecture)
-- [Installation](#installation)
-- [Built With](#built-with)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [AceInterview - AI Driven Interview Preparation System](#aceinterview---ai-driven-interview-preparation-system)
+  - [Table of Contents](#table-of-contents)
+  - [About The Project](#about-the-project)
+    - [Screenshots](#screenshots)
+  - [Key Features](#key-features)
+  - [Methodology](#methodology)
+    - [Data Acquisition](#data-acquisition)
+    - [Data Processing \& Attribute Extraction](#data-processing--attribute-extraction)
+    - [Predictive Modeling](#predictive-modeling)
+    - [Feedback Generation](#feedback-generation)
+    - [System Implementation](#system-implementation)
+  - [System Architecture](#system-architecture)
+  - [Installation](#installation)
+    - [Prerequisites](#prerequisites)
+    - [Setup Instructions](#setup-instructions)
+  - [Built With](#built-with)
+  - [License](#license)
+  - [Contact](#contact)
+  - [Acknowledgements](#acknowledgements)
 
 ## About The Project
 
@@ -186,11 +196,18 @@ Distributed under the MIT License. See `LICENSE` for details.
 
 ## Contact
 
-**Ujjwal Garg** - [@ujjwalgarg](https://github.com/gargujjwal)  
-**Project Advisor**: Prof. Senthil Kumaran U  
+**Ujjwal Garg** - [@ujjwalgarg](https://github.com/gargujjwal)
+**Project Advisor**: Prof. Senthil Kumaran U
 **Institution**: Vellore Institute of Technology
 
 Project Link: [https://github.com/gargujjwal/aceinterview](https://github.com/gargujjwal/aceinterview)
+
+## Acknowledgements
+
+- [https://github.com/jaspreet3397/Video-Interview-Analysis](https://github.com/jaspreet3397/Video-Interview-Analysis)
+- [https://github.com/PALASH-BAJPAI/HiRe_Automated_Interviewing_tool](https://github.com/PALASH-BAJPAI/HiRe_Automated_Interviewing_tool)
+- [https://github.com/yuvraaj2002/InterviewX/tree/master](https://github.com/yuvraaj2002/InterviewX/tree/master)
+- [https://github.com/malhaar2002/interview-analysis](https://github.com/malhaar2002/interview-analysis)
 
 <!-- MARKDOWN LINKS -->
 

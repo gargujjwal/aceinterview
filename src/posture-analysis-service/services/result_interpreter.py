@@ -3,12 +3,6 @@ class ResultInterpreter:
     Interprets posture analysis results and provides detailed inferences and improvement tips.
     """
 
-    def __init__(self):
-        """
-        Initialize the result interpreter.
-        """
-        pass
-
     def interpret_results(self, analysis_result):
         """
         Enhance analysis results with inferences and improvement tips.

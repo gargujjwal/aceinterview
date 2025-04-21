@@ -48,7 +48,7 @@ class ResultInterpreter:
         ]
 
         # Get the environment variable
-        self.result_mode = os.environ.get("RESULT", "0")
+        self.result_mode = os.environ.get("RESULT", "1")
         logger.info(f"ResultInterpreter initialized with RESULT={self.result_mode}")
 
     def interpret(self, prediction_dict):
